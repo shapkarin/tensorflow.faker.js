@@ -18,6 +18,7 @@ const getTopTracksIds = async function(){
     }
 }
 
+// todo: one lyrics language...
 const getLyrics = async function(){
     try {
         const ids = await getTopTracksIds();
@@ -28,7 +29,6 @@ const getLyrics = async function(){
         const data = await Promise.all(lyricsArray);
         const result = data.map(({ lyrics: { lyrics_body } }) => lyrics_body);
         const message = '******* This Lyrics is NOT for Commercial use *******';
-        // todo: one lyrics language...
         return result.join('\n').replace(message);
     } catch(error) {
         console.log(error);
