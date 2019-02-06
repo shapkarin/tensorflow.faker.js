@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/shapkarin/tensorflow.faker.js#readme",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "musicmatch": "^0.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
