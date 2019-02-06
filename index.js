@@ -1,5 +1,8 @@
-const detDataSet = require('./prepare');
+import { getLyricsData } from './dataset';
 
-detDataSet().then(
-    data => console.log(data)
-);
+async function getData(){
+    const data = await getLyricsData();
+    console.log(data);
+}
+
+getData();
