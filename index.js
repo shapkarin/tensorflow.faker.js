@@ -11,7 +11,7 @@ const getTopTracksIds = async function(){
             country: 'ru',
             f_has_lyrics: 1
         });
-        const result = track_list.map(({ track }) => track.track_id);
+        const result = track_list.map(({ track: { track_id } }) => track_id);
         return result;
     } catch(error) {
         console.log(error);
@@ -26,7 +26,7 @@ const getLyrics = async function(){
             return body;
         });
         const data = await Promise.all(lyricsArray);
-        const result = data.map(({ lyrics }) => lyrics.lyrics_body);
+        const result = data.map(({ lyrics: { lyrics_body } }) => lyrics_body);
         const message = '******* This Lyrics is NOT for Commercial use *******';
         // todo: one lyrics language...
         return result.join('\n').replace(message);
