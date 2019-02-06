@@ -1,0 +1,30 @@
+{
+  "name": "tensorflow.faker",
+  "version": "0.0.1",
+  "description": "generate fake data with tensorflow.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shapkarin/tensorflow.faker.js.git"
+  },
+  "keywords": [
+    "faker",
+    "tensorflow.js",
+    "tensorflow",
+    "mock",
+    "generate"
+  ],
+  "author": "Yury Shapkarin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shapkarin/tensorflow.faker.js/issues"
+  },
+  "homepage": "https://github.com/shapkarin/tensorflow.faker.js#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
