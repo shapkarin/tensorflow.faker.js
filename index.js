@@ -23,7 +23,7 @@ const getLyrics = async function(){
     try {
         const ids = await getTopTracksIds();
         const lyricsArray = ids.map(async id => {
-            const { message: { body } } = await music.trackLyrics({ track_id:id });
+            const { message: { body } } = await music.trackLyrics({ track_id: id });
             return body;
         });
         const data = await Promise.all(lyricsArray);
