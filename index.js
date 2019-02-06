@@ -28,8 +28,7 @@ const getLyrics = async function(){
         });
         const data = await Promise.all(lyricsArray);
         const result = data.map(({ lyrics: { lyrics_body } }) => lyrics_body);
-        const message = '******* This Lyrics is NOT for Commercial use *******';
-        return result.join('\n').replace(message);
+        return result.join('\n');
     } catch(error) {
         console.log(error);
     }
