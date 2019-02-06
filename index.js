@@ -11,7 +11,6 @@ const getTopTracksIds = async function(){
             country: 'ru',
             f_has_lyrics: 1
         });
-        console.log(track_list);
         const result = track_list.map(({ track }) => track.track_id);
         return result;
     } catch(error) {
@@ -28,8 +27,9 @@ const getLyrics = async function(){
         });
         const data = await Promise.all(lyricsArray);
         const result = data.map(({ lyrics }) => lyrics.lyrics_body);
-        // todo: check if one language...
-        return result.join('\n').replace('******* This Lyrics is NOT for Commercial use *******');
+        const message = '******* This Lyrics is NOT for Commercial use *******';
+        // todo: one lyrics language...
+        return result.join('\n').replace(message);
     } catch(error) {
         console.log(error);
     }
