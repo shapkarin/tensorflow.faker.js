@@ -4,7 +4,7 @@ function get_branch_name {
 
 function is_special_branch {
     local branch="$1"
-    echo "${branch}" | grep -i "^master" 1>/dev/null 2>&1
+    echo "${branch}" | grep -i "^\(master\|\|HEAD\)" 1>/dev/null 2>&1
     return $?
 }
 
